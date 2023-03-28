@@ -15,4 +15,39 @@
         android:name="uz.hamroev.ytlat.ui.test.TestFragment"
         android:label="fragment_test"
         tools:layout="@layout/fragment_test" />
+    <fragment
+        android:id="@+id/amaliyMashgulotlarFragment"
+        android:name="uz.hamroev.ytlat.ui.AmaliyMashgulotlarFragment"
+        android:label="fragment_amaliy_mashgulotlar"
+        tools:layout="@layout/fragment_amaliy_mashgulotlar" />
+    <fragment
+        android:id="@+id/fangaOidGlossariyFragment"
+        android:name="uz.hamroev.ytlat.ui.FangaOidGlossariyFragment"
+        android:label="fragment_fanga_oid_glossariy"
+        tools:layout="@layout/fragment_fanga_oid_glossariy" />
+    <fragment
+        android:id="@+id/fanningMeyoriyHujjatlariFragment"
+        android:name="uz.hamroev.ytlat.ui.FanningMeyoriyHujjatlariFragment"
+        android:label="fragment_fanning_meyoriy_hujjatlari"
+        tools:layout="@layout/fragment_fanning_meyoriy_hujjatlari" />
+    <fragment
+        android:id="@+id/maruzaFragment"
+        android:name="uz.hamroev.ytlat.ui.MaruzaFragment"
+        android:label="fragment_maruza"
+        tools:layout="@layout/fragment_maruza" />
+    <fragment
+        android:id="@+id/mavzuBoyichaTaqdimotFragment"
+        android:name="uz.hamroev.ytlat.ui.MavzuBoyichaTaqdimotFragment"
+        android:label="fragment_mavzu_boyicha_taqdimot"
+        tools:layout="@layout/fragment_mavzu_boyicha_taqdimot" />
+    <fragment
+        android:id="@+id/mavzuBoyichaVideoFragment"
+        android:name="uz.hamroev.ytlat.ui.MavzuBoyichaVideoFragment"
+        android:label="fragment_mavzu_boyicha_video"
+        tools:layout="@layout/fragment_mavzu_boyicha_video" />
+    <fragment
+        android:id="@+id/mualliflarFragment"
+        android:name="uz.hamroev.ytlat.ui.MualliflarFragment"
+        android:label="fragment_mualliflar"
+        tools:layout="@layout/fragment_mualliflar" />
 </navigation>
