@@ -2,4 +2,13 @@
     <string name="app_name">YTLAT</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="test">Test</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last name</string>
+    <string name="enter_your_name">In order to take a test, please fill first and last name fields.</string>
+    <string name="cancel">Cancel</string>
+    <string name="start">Start</string>
+    <string name="error_empty_field">please, fill field</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
 </resources>

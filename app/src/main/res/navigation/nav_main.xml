@@ -10,4 +10,9 @@
         android:name="uz.hamroev.ytlat.ui.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/testFragment"
+        android:name="uz.hamroev.ytlat.ui.test.TestFragment"
+        android:label="fragment_test"
+        tools:layout="@layout/fragment_test" />
 </navigation>
