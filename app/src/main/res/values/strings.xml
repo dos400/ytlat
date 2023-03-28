@@ -11,4 +11,5 @@
     <string name="error_empty_field">please, fill field</string>
     <string name="previous">Previous</string>
     <string name="next">Next</string>
+    <string name="finish">Finish</string>
 </resources>
