@@ -27,7 +27,7 @@ class TestFragment : Fragment() {
     private var totalQuestion = 29 // count number of questions -1
     private val selectedAnswers: List<TestData> by lazy {
         val list = TestList.loadQuestionsFromAssets(requireContext())
-            list.forEach {
+        list.forEach {
             it.answers = it.answers.shuffled() as ArrayList<Variant>
         }
         list.shuffled()
