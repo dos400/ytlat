@@ -38,7 +38,6 @@ class TestFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentTestBinding.inflate(layoutInflater, container, false)
-
         return binding.root
     }
 
