@@ -2,10 +2,10 @@ package uz.hamroev.ytlat.ui.test.data
 
 data class TestData(
     val question: String,
-    val a: String,
-    val b: String,
-    val c: String,
-    val d: String,
-    val correctAnswer: Int,
+    var a: String,
+    var b: String,
+    var c: String,
+    var d: String,
+    var correctAnswer: Int,
     var selectedAnswer: Int = -1
 )

@@ -23,9 +23,9 @@ class TestFragment : Fragment() {
     private var lastName: String = ""
 
     private var currentQuestion = 0
-    private var totalQuestion = 2
+    private var totalQuestion = 29 // count number of questions -1
     private val selectedAnswers: List<TestData> by lazy {
-        TestList.list
+        TestList.loadQuestionsFromAssets(requireContext()).shuffled()
     }
 
     override fun onCreateView(
