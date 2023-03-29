@@ -12,7 +12,7 @@ import androidx.navigation.fragment.findNavController
 import uz.hamroev.ytlat.R
 import uz.hamroev.ytlat.databinding.FragmentTestBinding
 import uz.hamroev.ytlat.ui.test.data.TestData
-import uz.hamroev.ytlat.ui.test.data.TestDataList
+import uz.hamroev.ytlat.ui.test.data.TestList
 
 class TestFragment : Fragment() {
 
@@ -24,8 +24,8 @@ class TestFragment : Fragment() {
 
     private var currentQuestion = 0
     private var totalQuestion = 2
-    private val selectedAnswers :List<TestData> by lazy {
-        TestDataList.list
+    private val selectedAnswers: List<TestData> by lazy {
+        TestList.list
     }
 
     override fun onCreateView(
@@ -46,46 +46,44 @@ class TestFragment : Fragment() {
         loadData()
         binding.nextBtn.setOnClickListener {
             if (currentQuestion == totalQuestion) {
+                selectedAnswers[currentQuestion].selectedAnswer = binding.answersGroup.checkedRadioButtonId
                 finish()
             } else if (currentQuestion < totalQuestion) {
-                selectedAnswers[currentQuestion].selectedAnswer = binding.answersGroup.checkedRadioButtonId
-                if(currentQuestion == totalQuestion){
-                    binding.nextBtn.text = requireContext().getString(R.string.finish)
-                }
+                selectedAnswers[currentQuestion].selectedAnswer =
+                    binding.answersGroup.checkedRadioButtonId
                 currentQuestion++
                 val anim = AnimationUtils.loadAnimation(requireContext(), R.anim.next_quetion)
                 binding.questionContainer.startAnimation(anim)
-                binding.questionTitleTv.text = selectedAnswers[currentQuestion].title
-                binding.aAnswerTv.text = selectedAnswers[currentQuestion].a
-                binding.bAnswerTv.text = selectedAnswers[currentQuestion].b
-                binding.cAnswerTv.text = selectedAnswers[currentQuestion].c
-                binding.dAnswerTv.text = selectedAnswers[currentQuestion].d
+                binding.answersGroup.clearCheck()
+                loadData()
             }
-            binding.questionNumberTv.text = "${currentQuestion + 1}/${totalQuestion + 1}"
         }
         binding.previousBtn.setOnClickListener {
-            if (currentQuestion == totalQuestion - 1) {
-                binding.nextBtn.text = requireContext().getString(R.string.next)
+            if (currentQuestion != 0) {
+                selectedAnswers[currentQuestion].selectedAnswer = binding.answersGroup.checkedRadioButtonId
+                currentQuestion--
+                val anim = AnimationUtils.loadAnimation(requireContext(), R.anim.previous_quetion)
+                binding.questionContainer.startAnimation(anim)
+                binding.answersGroup.clearCheck()
+                loadData()
             }
-            currentQuestion--
-            val anim = AnimationUtils.loadAnimation(requireContext(), R.anim.previous_quetion)
-            binding.questionContainer.startAnimation(anim)
-            binding.questionTitleTv.text = selectedAnswers[currentQuestion].title
-            binding.aAnswerTv.text = selectedAnswers[currentQuestion].a
-            binding.bAnswerTv.text = selectedAnswers[currentQuestion].b
-            binding.cAnswerTv.text = selectedAnswers[currentQuestion].c
-            binding.dAnswerTv.text = selectedAnswers[currentQuestion].d
-
-            binding.questionNumberTv.text = "${currentQuestion + 1}/${totalQuestion + 1}"
         }
     }
 
     private fun loadData() {
-        binding.questionTitleTv.text = selectedAnswers[currentQuestion].title
+        binding.questionNumberTv.text = "${currentQuestion + 1}/${totalQuestion + 1}"
+        if (totalQuestion == currentQuestion)
+            binding.nextBtn.text = requireContext().getString(R.string.finish)
+        else binding.nextBtn.text = requireContext().getString(R.string.next)
+
+        binding.questionTitleTv.text = selectedAnswers[currentQuestion].question
         binding.aAnswerTv.text = selectedAnswers[currentQuestion].a
         binding.bAnswerTv.text = selectedAnswers[currentQuestion].b
         binding.cAnswerTv.text = selectedAnswers[currentQuestion].c
         binding.dAnswerTv.text = selectedAnswers[currentQuestion].d
+        if (selectedAnswers[currentQuestion].selectedAnswer != -1) {
+            binding.answersGroup.check(selectedAnswers[currentQuestion].selectedAnswer)
+        }
     }
 
     private fun finish() {
@@ -95,7 +93,7 @@ class TestFragment : Fragment() {
                 correctAnswers++
             }
         }
-        Toast.makeText(requireContext(), correctAnswers.toString(), Toast.LENGTH_SHORT).show()
+        Toast.makeText(requireContext(), (correctAnswers).toString(), Toast.LENGTH_SHORT).show()
     }
 
     private fun openFormDialog() {

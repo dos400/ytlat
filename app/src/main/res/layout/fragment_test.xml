@@ -25,12 +25,12 @@
 
 
         <TextView
-            android:paddingHorizontal="16dp"
-            android:paddingTop="4dp"
             android:id="@+id/question_number_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="4dp"
             android:textColor="@color/black"
             android:textSize="24sp" />
 
@@ -42,8 +42,8 @@
                 android:id="@+id/question_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:clipToPadding="false"
+                android:orientation="vertical"
                 android:paddingHorizontal="16dp"
                 android:paddingBottom="16dp">
 
@@ -61,89 +61,45 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <LinearLayout
+                    <RadioButton
+                        android:id="@+id/a_answer_tv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:background="@drawable/corner_bg"
-                        android:orientation="horizontal"
-                        android:paddingHorizontal="8dp">
+                        android:paddingHorizontal="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
 
-                        <RadioButton
-                            android:id="@+id/a_radio_btn"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-
-                        <TextView
-                            android:id="@+id/a_answer_tv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:textSize="18sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
+                    <RadioButton
+                        android:id="@+id/b_answer_tv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:background="@drawable/corner_bg"
-                        android:orientation="horizontal"
-                        android:paddingHorizontal="8dp">
+                        android:paddingHorizontal="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
 
-                        <RadioButton
-                            android:id="@+id/b_radio_btn"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-
-                        <TextView
-                            android:id="@+id/b_answer_tv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:textSize="18sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
+                    <RadioButton
+                        android:id="@+id/c_answer_tv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:background="@drawable/corner_bg"
-                        android:orientation="horizontal"
-                        android:paddingHorizontal="8dp">
+                        android:paddingHorizontal="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
 
-                        <RadioButton
-                            android:id="@+id/c_radio_btn"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-
-                        <TextView
-                            android:id="@+id/c_answer_tv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:textSize="18sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
+                    <RadioButton
+                        android:id="@+id/d_answer_tv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:background="@drawable/corner_bg"
-                        android:orientation="horizontal"
-                        android:paddingHorizontal="8dp">
-
-                        <RadioButton
-                            android:id="@+id/d_radio_btn"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-
-                        <TextView
-                            android:id="@+id/d_answer_tv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:textSize="18sp" />
-                    </LinearLayout>
+                        android:paddingHorizontal="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
                 </RadioGroup>
 
             </LinearLayout>

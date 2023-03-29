@@ -49,8 +49,8 @@ class HomeFragment : Fragment() {
             )
         )
         listMain.add(MainDepartment("Ma’ruzalar mavzulari va matni", R.drawable.ic_maruza))
-        listMain.add(MainDepartment("Mavzular bo’yicha taqdimotlar", R.drawable.ic_taqdimot))
-        listMain.add(MainDepartment("Mavzular bo’yicha video darslar", R.drawable.ic_video))
+//        listMain.add(MainDepartment("Mavzular bo’yicha taqdimotlar", R.drawable.ic_taqdimot))
+//        listMain.add(MainDepartment("Mavzular bo’yicha video darslar", R.drawable.ic_video))
         listMain.add(
             MainDepartment(
                 "Mavzular bo’yicha amaliy mashg’ulotlar",
@@ -58,8 +58,8 @@ class HomeFragment : Fragment() {
             )
         )
         listMain.add(MainDepartment("Fanga oid glossariy va adabiyotlar", R.drawable.ic_glossariy))
-        listMain.add(MainDepartment("Test sinovi", R.drawable.ic_test))
-        listMain.add(MainDepartment("Mualliflar haqida", R.drawable.ic_users))
+//        listMain.add(MainDepartment("Test sinovi", R.drawable.ic_test))
+//        listMain.add(MainDepartment("Mualliflar haqida", R.drawable.ic_users))
         val mainDepartmentAdapter = MainDepartmentAdapter(
             binding.root.context,
             listMain,
