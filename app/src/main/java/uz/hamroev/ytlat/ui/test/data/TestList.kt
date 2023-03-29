@@ -25,34 +25,30 @@ object TestList {
             val text = reader.readLines()
             text.forEachIndexed {index, str ->
                 if (index % 8 == 0) {
-                    list.add(TestData(str, "", "", "", "", 0))
+                    list.add(TestData(str, arrayListOf()))
                 } else if (index % 8 == 2) {
                     if(str.startsWith("~")) {
-                        list[index / 8].a = str.removePrefix("~")
+                        list[index / 8].answers.add(Variant(str.removePrefix("~"), false))
                     } else if (str.startsWith("=")) {
-                        list[index / 8].a = str.removePrefix("=")
-                        list[index / 8].correctAnswer = a
+                        list[index / 8].answers.add(Variant(str.removePrefix("="), true))
                     }
                 } else if (index % 8 == 3) {
                     if(str.startsWith("~")) {
-                        list[index / 8].b = str.removePrefix("~")
+                        list[index / 8].answers.add(Variant(str.removePrefix("~"), false))
                     } else if (str.startsWith("=")) {
-                        list[index / 8].b = str.removePrefix("=")
-                        list[index / 8].correctAnswer = b
+                        list[index / 8].answers.add(Variant(str.removePrefix("="), true))
                     }
                 } else if (index % 8 == 4) {
                     if(str.startsWith("~")) {
-                        list[index / 8].c = str.removePrefix("~")
+                        list[index / 8].answers.add(Variant(str.removePrefix("~"), false))
                     } else if (str.startsWith("=")) {
-                        list[index / 8].c = str.removePrefix("=")
-                        list[index / 8].correctAnswer = c
+                        list[index / 8].answers.add(Variant(str.removePrefix("="), true))
                     }
                 } else if (index % 8 == 5) {
                     if(str.startsWith("~")) {
-                        list[index / 8].d = str.removePrefix("~")
+                        list[index / 8].answers.add(Variant(str.removePrefix("~"), false))
                     } else if (str.startsWith("=")) {
-                        list[index / 8].d = str.removePrefix("=")
-                        list[index / 8].correctAnswer = d
+                        list[index / 8].answers.add(Variant(str.removePrefix("="), true))
                     }
                 }
             }

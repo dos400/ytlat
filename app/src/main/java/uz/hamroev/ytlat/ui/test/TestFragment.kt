@@ -13,6 +13,7 @@ import uz.hamroev.ytlat.R
 import uz.hamroev.ytlat.databinding.FragmentTestBinding
 import uz.hamroev.ytlat.ui.test.data.TestData
 import uz.hamroev.ytlat.ui.test.data.TestList
+import uz.hamroev.ytlat.ui.test.data.Variant
 
 class TestFragment : Fragment() {
 
@@ -25,7 +26,11 @@ class TestFragment : Fragment() {
     private var currentQuestion = 0
     private var totalQuestion = 29 // count number of questions -1
     private val selectedAnswers: List<TestData> by lazy {
-        TestList.loadQuestionsFromAssets(requireContext()).shuffled()
+        val list = TestList.loadQuestionsFromAssets(requireContext())
+            list.forEach {
+            it.answers = it.answers.shuffled() as ArrayList<Variant>
+        }
+        list.shuffled()
     }
 
     override fun onCreateView(
@@ -77,10 +82,10 @@ class TestFragment : Fragment() {
         else binding.nextBtn.text = requireContext().getString(R.string.next)
 
         binding.questionTitleTv.text = selectedAnswers[currentQuestion].question
-        binding.aAnswerTv.text = selectedAnswers[currentQuestion].a
-        binding.bAnswerTv.text = selectedAnswers[currentQuestion].b
-        binding.cAnswerTv.text = selectedAnswers[currentQuestion].c
-        binding.dAnswerTv.text = selectedAnswers[currentQuestion].d
+        binding.aAnswerTv.text = selectedAnswers[currentQuestion].answers[0].first
+        binding.bAnswerTv.text = selectedAnswers[currentQuestion].answers[1].first
+        binding.cAnswerTv.text = selectedAnswers[currentQuestion].answers[2].first
+        binding.dAnswerTv.text = selectedAnswers[currentQuestion].answers[3].first
         if (selectedAnswers[currentQuestion].selectedAnswer != -1) {
             binding.answersGroup.check(selectedAnswers[currentQuestion].selectedAnswer)
         }
@@ -89,8 +94,15 @@ class TestFragment : Fragment() {
     private fun finish() {
         var correctAnswers = 0
         selectedAnswers.forEach {
-            if (it.selectedAnswer == it.correctAnswer) {
-                correctAnswers++
+            val selectedAnswer = when (it.selectedAnswer) {
+                R.id.a_answer_tv -> 0
+                R.id.b_answer_tv -> 1
+                R.id.c_answer_tv -> 2
+                R.id.d_answer_tv -> 3
+                else -> -1
+            }
+            if (selectedAnswer!=-1) {
+                if(it.answers[selectedAnswer].second) correctAnswers++
             }
         }
         Toast.makeText(requireContext(), (correctAnswers).toString(), Toast.LENGTH_SHORT).show()
