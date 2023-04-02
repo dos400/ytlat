@@ -23,6 +23,7 @@ class MavzuBoyichaVideoFragment : Fragment() {
         binding.imageMenuLayout.setOnClickListener {
             findNavController().popBackStack()
         }
+        binding.titleWindowTv.text = "Mavzular bo’yicha video darslar"
 
         return binding.root
     }

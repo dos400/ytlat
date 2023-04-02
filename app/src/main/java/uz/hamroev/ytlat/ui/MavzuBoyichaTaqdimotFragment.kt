@@ -22,6 +22,7 @@ class MavzuBoyichaTaqdimotFragment : Fragment() {
         binding.imageMenuLayout.setOnClickListener {
             findNavController().popBackStack()
         }
+        binding.titleWindowTv.text = "Mavzular bo’yicha taqdimotlar"
 
         return binding.root
     }

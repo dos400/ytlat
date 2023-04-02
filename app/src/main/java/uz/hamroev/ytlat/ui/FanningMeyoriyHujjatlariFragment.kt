@@ -21,6 +21,7 @@ class FanningMeyoriyHujjatlariFragment : Fragment() {
             findNavController().popBackStack()
         }
 
+        binding.titleWindowTv.text = "Fanning me’yoriy hujjatlari"
 
 
 

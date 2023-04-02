@@ -21,6 +21,8 @@ class AmaliyMashgulotlarFragment : Fragment() {
             findNavController().popBackStack()
         }
 
+        binding.titleWindowTv.text = "Mavzular bo’yicha amaliy mashg’ulotlar"
+
         return binding.root
     }
 

@@ -22,6 +22,7 @@ class MaruzaFragment : Fragment() {
         binding.imageMenuLayout.setOnClickListener {
             findNavController().popBackStack()
         }
+        binding.titleWindowTv.text = "Ma’ruzalar mavzulari va matni"
 
         return binding.root
     }

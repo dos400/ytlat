@@ -1,5 +1,6 @@
 package uz.hamroev.ytlat.ui.test
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -15,6 +16,7 @@ import uz.hamroev.ytlat.ui.test.data.TestData
 import uz.hamroev.ytlat.ui.test.data.TestList
 import uz.hamroev.ytlat.ui.test.data.Variant
 
+@SuppressLint("SuspiciousIndentation")
 class TestFragment : Fragment() {
 
     private var _binding: FragmentTestBinding? = null
@@ -105,10 +107,15 @@ class TestFragment : Fragment() {
                 if(it.answers[selectedAnswer].second) correctAnswers++
             }
         }
+        // true answers count here
         Toast.makeText(requireContext(), (correctAnswers).toString(), Toast.LENGTH_SHORT).show()
     }
 
     private fun openFormDialog() {
+        binding.apply {
+            one.visibility = View.GONE
+            two.visibility = View.GONE
+        }
         val formDialog = FormDialog()
         formDialog.isCancelable = false
         formDialog.arguments = Bundle().apply {
@@ -117,6 +124,10 @@ class TestFragment : Fragment() {
                     this@TestFragment.firstName = firstName
                     this@TestFragment.lastName = lastName
 
+                    binding.apply {
+                        one.visibility = View.VISIBLE
+                        two.visibility = View.VISIBLE
+                    }
                     Log.d("TTTT", "start: $firstName $lastName")
                 }
 
@@ -134,3 +145,5 @@ class TestFragment : Fragment() {
     }
 
 }
+
+
