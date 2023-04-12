@@ -60,27 +60,35 @@ class TestFragment : Fragment() {
 
         loadData()
         binding.nextBtn.setOnClickListener {
-            if (currentQuestion == totalQuestion) {
-                selectedAnswers[currentQuestion].selectedAnswer = binding.answersGroup.checkedRadioButtonId
-                finish()
-            } else if (currentQuestion < totalQuestion) {
-                selectedAnswers[currentQuestion].selectedAnswer =
-                    binding.answersGroup.checkedRadioButtonId
-                currentQuestion++
-                val anim = AnimationUtils.loadAnimation(requireContext(), R.anim.next_quetion)
-                binding.questionContainer.startAnimation(anim)
-                binding.answersGroup.clearCheck()
-                loadData()
+            try{
+                if (currentQuestion == totalQuestion) {
+                    selectedAnswers[currentQuestion].selectedAnswer = binding.answersGroup.checkedRadioButtonId
+                    finish()
+                } else if (currentQuestion < totalQuestion) {
+                    selectedAnswers[currentQuestion].selectedAnswer =
+                        binding.answersGroup.checkedRadioButtonId
+                    currentQuestion++
+                    val anim = AnimationUtils.loadAnimation(requireContext(), R.anim.next_quetion)
+                    binding.questionContainer.startAnimation(anim)
+                    binding.answersGroup.clearCheck()
+                    loadData()
+                }
+            }catch (ex:Exception){
+                Toast.makeText(requireContext(), "Biror xatolik yuz berdi", Toast.LENGTH_SHORT).show()
             }
         }
         binding.previousBtn.setOnClickListener {
-            if (currentQuestion != 0) {
-                selectedAnswers[currentQuestion].selectedAnswer = binding.answersGroup.checkedRadioButtonId
-                currentQuestion--
-                val anim = AnimationUtils.loadAnimation(requireContext(), R.anim.previous_quetion)
-                binding.questionContainer.startAnimation(anim)
-                binding.answersGroup.clearCheck()
-                loadData()
+            try {
+                if (currentQuestion != 0) {
+                    selectedAnswers[currentQuestion].selectedAnswer = binding.answersGroup.checkedRadioButtonId
+                    currentQuestion--
+                    val anim = AnimationUtils.loadAnimation(requireContext(), R.anim.previous_quetion)
+                    binding.questionContainer.startAnimation(anim)
+                    binding.answersGroup.clearCheck()
+                    loadData()
+                }
+            }catch (ex:Exception){
+                Toast.makeText(requireContext(), "Biror xatolik yuz berdi", Toast.LENGTH_SHORT).show()
             }
         }
     }
