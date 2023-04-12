@@ -58,5 +58,18 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
     //Circle Image View
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+    //pdf viewer
+    implementation "com.dmitryborodin:pdfview-android:1.1.0"
+    //lottie Animation
+    implementation 'com.airbnb.android:lottie:4.2.2'
+    //animation
+    implementation 'com.github.gayanvoice:android-animations:1.0.2'
+    //Click Shrink Effect
+    implementation 'com.github.realpacific:click-shrink-effect:2.0'
+    //you tube player
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:11.0.1'
+
+
+
 
 }
