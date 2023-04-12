@@ -60,5 +60,22 @@ object Cache {
         }
 
 
+    var username: String?
+        get() = sharedPreferences.getString("username", "None")
+        set(value) = sharedPreferences.edit() {
+            if (value != null) {
+                it.putString("username", value)
+            }
+        }
+
+    var userinfo: String?
+        get() = sharedPreferences.getString("userinfo", "None")
+        set(value) = sharedPreferences.edit() {
+            if (value != null) {
+                it.putString("userinfo", value)
+            }
+        }
+
+
 }
 

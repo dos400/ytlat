@@ -13,6 +13,7 @@
         app:cardElevation="3dp">
 
         <LinearLayout
+            android:background="@color/blue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -29,12 +30,12 @@
 
             </LinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:background="@color/grey_blue" />
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginLeft="15dp"-->
+<!--                android:layout_marginRight="15dp"-->
+<!--                android:background="@color/grey_blue" />-->
 
             <TextView
                 android:id="@+id/video_name"
@@ -42,9 +43,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:gravity="center_vertical"
-                android:padding="5dp"
+                android:padding="10dp"
                 android:text="cdcacascaacac asc asc as c asc asc"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="14sp"
                 android:textStyle="normal" />
 
