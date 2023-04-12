@@ -26,7 +26,7 @@ class PdfFragment : Fragment() {
         }
         Handler(Looper.getMainLooper()).postDelayed({
             binding.progress.visibility = View.GONE
-        }, 700)
+        }, 200)
 
         loadPage()
 
