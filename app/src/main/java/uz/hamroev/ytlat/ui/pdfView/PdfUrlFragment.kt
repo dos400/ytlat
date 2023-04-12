@@ -5,14 +5,16 @@ import android.os.Environment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.DownloadListener
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.ixuea.android.downloader.DownloadService
-import com.ixuea.android.downloader.DownloadService.downloadManager
-import com.ixuea.android.downloader.callback.DownloadListener
 import com.ixuea.android.downloader.domain.DownloadInfo
 import com.ixuea.android.downloader.exception.DownloadException
 import uz.hamroev.ytlat.databinding.FragmentPdfUrlBinding
+import uz.hamroev.ytlat.util.extensions.invisible
+import uz.hamroev.ytlat.util.extensions.toast
+import uz.hamroev.ytlat.util.extensions.visible
 import java.io.File
 
 
@@ -26,7 +28,7 @@ class PdfUrlFragment : Fragment() {
     ): View {
         binding = FragmentPdfUrlBinding.inflate(layoutInflater)
 
-        binding.imageMenuLayout.setOnClickListener {
+        binding.toolbar.setNavigationOnClickListener {
             findNavController().popBackStack()
         }
 
@@ -43,49 +45,53 @@ class PdfUrlFragment : Fragment() {
 
         val targetFile =
             File(requireContext().getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS), "6.pdf")
-        val downloadInfo = DownloadInfo.Builder().setUrl("https://drive.google.com/u/0/uc?id=1sqDlIHmxqq-GtoB2ZElauFo9egW6YZ_J&export=download")
-            .setPath(targetFile.absolutePath)
-            .build()
 
-//set download callback.
+        if (targetFile.exists()) {
+            binding.pdfView.fromFile(targetFile).show()
+        } else {
+            val downloadInfo = DownloadInfo.Builder().setUrl("https://drive.google.com/u/0/uc?id=1sqDlIHmxqq-GtoB2ZElauFo9egW6YZ_J&export=download")
+                .setPath(targetFile.absolutePath)
+                .build()
 
-//set download callback.
-        downloadInfo.downloadListener = object : DownloadListener {
-            override fun onStart() {
-                TODO("Not yet implemented")
+            downloadInfo.downloadListener = object : DownloadListener, com.ixuea.android.downloader.callback.DownloadListener {
+                override fun onDownloadStart(url: String?, userAgent: String?, contentDisposition: String?, mimetype: String?, contentLength: Long) {
+
+                }
+
+                override fun onStart() {
+                    binding.progress.visible()
+                }
+
+                override fun onWaited() {
+
+                }
+
+                override fun onPaused() {
+                    binding.progress.invisible()
+                }
+
+                override fun onDownloading(progress: Long, size: Long) {
+
+                }
+
+                override fun onRemoved() {
+
+                }
+
+                override fun onDownloadSuccess() {
+                    binding.pdfView.fromFile(targetFile).show()
+                    binding.progress.invisible()
+                }
+
+                override fun onDownloadFailed(e: DownloadException?) {
+                    binding.progress.invisible()
+                    toast(e?.printStackTrace().toString())
+                }
+
             }
-
-            override fun onWaited() {
-                TODO("Not yet implemented")
-            }
-
-            override fun onPaused() {
-                TODO("Not yet implemented")
-            }
-
-            override fun onDownloading(progress: Long, size: Long) {
-                TODO("Not yet implemented")
-            }
-
-            override fun onRemoved() {
-                TODO("Not yet implemented")
-            }
-
-            override fun onDownloadSuccess() {
-                TODO("Not yet implemented")
-
-            }
-
-            override fun onDownloadFailed(e: DownloadException?) {
-                TODO("Not yet implemented")
-            }
-
-
+            downloadManager.download(downloadInfo)
         }
 
-        downloadManager.download(downloadInfo)
-
-        binding.pdfView.fromFile(targetFile).show()
     }
 
 
