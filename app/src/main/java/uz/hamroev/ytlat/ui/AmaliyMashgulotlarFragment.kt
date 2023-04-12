@@ -76,7 +76,7 @@ class AmaliyMashgulotlarFragment : Fragment() {
                 override fun onClick(mavzu: Mavzu, position: Int) {
                     Cache.position = position
                     Cache.mavzuNumber = mavzu.number
-                    findNavController().navigate(uz.hamroev.ytlat.R.id.pdfFragment)
+                    findNavController().navigate(uz.hamroev.ytlat.R.id.pdfUrlFragment)
                 }
             })
         binding.rvMain.adapter = mavzuAdapter
