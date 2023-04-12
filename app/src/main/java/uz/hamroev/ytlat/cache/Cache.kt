@@ -27,6 +27,14 @@ object Cache {
             }
         }
 
+    var position: Int?
+        get() = sharedPreferences.getInt("position", 0)
+        set(value) = sharedPreferences.edit() {
+            if (value != null) {
+                it.putInt("position", value)
+            }
+        }
+
     var filterName: String?
         get() = sharedPreferences.getString("filtername", "None")
         set(value) = sharedPreferences.edit() {
@@ -35,8 +43,38 @@ object Cache {
             }
         }
 
+    var mavzuNumber: String?
+        get() = sharedPreferences.getString("mavzunomi", "None")
+        set(value) = sharedPreferences.edit() {
+            if (value != null) {
+                it.putString("mavzunomi", value)
+            }
+        }
+
+    var pageName: String?
+        get() = sharedPreferences.getString("pageName", "None")
+        set(value) = sharedPreferences.edit() {
+            if (value != null) {
+                it.putString("pageName", value)
+            }
+        }
 
 
+    var username: String?
+        get() = sharedPreferences.getString("username", "None")
+        set(value) = sharedPreferences.edit() {
+            if (value != null) {
+                it.putString("username", value)
+            }
+        }
+
+    var userinfo: String?
+        get() = sharedPreferences.getString("userinfo", "None")
+        set(value) = sharedPreferences.edit() {
+            if (value != null) {
+                it.putString("userinfo", value)
+            }
+        }
 
 
 }

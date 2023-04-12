@@ -50,4 +50,14 @@
         android:name="uz.hamroev.ytlat.ui.MualliflarFragment"
         android:label="fragment_mualliflar"
         tools:layout="@layout/fragment_mualliflar" />
+    <fragment
+        android:id="@+id/pdfFragment"
+        android:name="uz.hamroev.ytlat.ui.pdfView.PdfFragment"
+        android:label="fragment_pdf"
+        tools:layout="@layout/fragment_pdf" />
+    <fragment
+        android:id="@+id/pdfUrlFragment"
+        android:name="uz.hamroev.ytlat.ui.pdfView.PdfUrlFragment"
+        android:label="fragment_pdf_url"
+        tools:layout="@layout/fragment_pdf_url" />
 </navigation>

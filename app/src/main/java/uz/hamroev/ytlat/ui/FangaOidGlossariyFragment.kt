@@ -23,6 +23,9 @@ class FangaOidGlossariyFragment : Fragment() {
             findNavController().popBackStack()
         }
 
+        binding.titleWindowTv.text = "Fanga oid glossariy va adabiyotlar"
+        binding.pdfView.fromAsset("pdf_glossariy.pdf").show()
+
         return binding.root
     }
 

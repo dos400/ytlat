@@ -11,6 +11,9 @@
         android:layout_height="match_parent"
         android:layout_margin="10dp"
         app:cardCornerRadius="12dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:background="?android:attr/selectableItemBackground"
+        android:focusable="true"
         app:cardElevation="5dp">
 
         <LinearLayout

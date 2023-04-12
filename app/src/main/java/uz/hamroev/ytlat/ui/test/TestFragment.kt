@@ -1,5 +1,9 @@
 package uz.hamroev.ytlat.ui.test
 
+import android.annotation.SuppressLint
+import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -10,11 +14,14 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import uz.hamroev.ytlat.R
+import uz.hamroev.ytlat.cache.Cache
+import uz.hamroev.ytlat.databinding.DialogResultBinding
 import uz.hamroev.ytlat.databinding.FragmentTestBinding
 import uz.hamroev.ytlat.ui.test.data.TestData
 import uz.hamroev.ytlat.ui.test.data.TestList
 import uz.hamroev.ytlat.ui.test.data.Variant
 
+@SuppressLint("SuspiciousIndentation")
 class TestFragment : Fragment() {
 
     private var _binding: FragmentTestBinding? = null
@@ -27,7 +34,7 @@ class TestFragment : Fragment() {
     private var totalQuestion = 29 // count number of questions -1
     private val selectedAnswers: List<TestData> by lazy {
         val list = TestList.loadQuestionsFromAssets(requireContext())
-        list.forEach {
+            list.forEach {
             it.answers = it.answers.shuffled() as ArrayList<Variant>
         }
         list.shuffled()
@@ -38,15 +45,20 @@ class TestFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentTestBinding.inflate(layoutInflater, container, false)
+
+
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         openFormDialog()
+
         binding.toolbar.setNavigationOnClickListener {
             findNavController().popBackStack()
         }
+
         loadData()
         binding.nextBtn.setOnClickListener {
             if (currentQuestion == totalQuestion) {
@@ -104,10 +116,75 @@ class TestFragment : Fragment() {
                 if(it.answers[selectedAnswer].second) correctAnswers++
             }
         }
-        Toast.makeText(requireContext(), (correctAnswers).toString(), Toast.LENGTH_SHORT).show()
+        // true answers count here
+        setResult(correctAnswers)
+
+//        Toast.makeText(requireContext(), (correctAnswers).toString()+" da", Toast.LENGTH_SHORT).show()
+    }
+
+    private fun setResult(correctAnswers: Int) {
+        // will be dialog
+        binding.apply {
+            one.visibility = View.INVISIBLE
+            two.visibility = View.INVISIBLE
+        }
+        val alertDialog = android.app.AlertDialog.Builder(binding.root.context)
+        val dialog = alertDialog.create()
+        val bindingResult =
+            DialogResultBinding.inflate(LayoutInflater.from(requireContext()))
+        dialog.setView(bindingResult.root)
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        dialog.setCancelable(true)
+
+        bindingResult.username.text = Cache.username.toString()!!
+        bindingResult.userinfo.text = Cache.userinfo.toString()!!
+
+        bindingResult.correctAnswer.text  = "${correctAnswers}/30"
+        val a: Float = (correctAnswers.toFloat()/30.0f)
+        val b = (a*100).toInt()
+        bindingResult.correctAnswerWithPercantage.text = b.toString()+"%"
+
+        bindingResult.again.setOnClickListener {
+            dialog.dismiss()
+            findNavController().popBackStack()
+            findNavController().navigate(R.id.testFragment)
+        }
+
+        bindingResult.share.setOnClickListener {
+            try {
+                val intent = Intent(Intent.ACTION_SEND)
+                intent.type = "text/plain"
+                intent.putExtra(Intent.EXTRA_SUBJECT, "YTLAT")
+
+                val shareMessage = "" +
+                        "Ism: ${Cache.username}\n" +
+                        "Qisqacha ma'lumot: ${Cache.username}\n" +
+                        "\n" +
+                        "To'g'ri javoblar soni: ${correctAnswers}/30\n" +
+                        "To'g'ri javoblar foiz ko'rsatgichida: $b%\n" +
+                        "\n\n" +
+                        "Fan nomi: YER TUZISHNI LOYIHALASHNING AVTOMATLASHGAN TIZIMLARI \n\n" +
+                        "================\n\n" +
+                        "Ilova: https://play.google.com/store/apps/details?id=${activity?.packageName}\n"
+
+                intent.putExtra(Intent.EXTRA_TEXT, shareMessage)
+                startActivity(Intent.createChooser(intent, "share by iAndroid.uz"))
+            } catch (e: Exception) {
+            }
+        }
+
+
+
+        dialog.show()
+
+
     }
 
     private fun openFormDialog() {
+        binding.apply {
+            one.visibility = View.GONE
+            two.visibility = View.GONE
+        }
         val formDialog = FormDialog()
         formDialog.isCancelable = false
         formDialog.arguments = Bundle().apply {
@@ -116,6 +193,12 @@ class TestFragment : Fragment() {
                     this@TestFragment.firstName = firstName
                     this@TestFragment.lastName = lastName
 
+                    binding.apply {
+                        one.visibility = View.VISIBLE
+                        two.visibility = View.VISIBLE
+                        Cache.username = firstName
+                        Cache.userinfo = lastName
+                    }
                     Log.d("TTTT", "start: $firstName $lastName")
                 }
 
@@ -133,3 +216,5 @@ class TestFragment : Fragment() {
     }
 
 }
+
+

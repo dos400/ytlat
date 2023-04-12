@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:padding="12dp"
+        android:text="YER TUZISHNI LOYIHALASHNING AVTOMATLASHGAN TIZIMLARI fanining mobil ilovasi "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:lottie_autoPlay="true"
+        app:lottie_speed="2"
+        app:lottie_fileName="land.json"
+        app:lottie_loop="true"
+        app:lottie_repeatMode="reverse" />
+
+</LinearLayout>
