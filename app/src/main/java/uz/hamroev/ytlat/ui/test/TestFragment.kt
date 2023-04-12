@@ -32,13 +32,7 @@ class TestFragment : Fragment() {
 
     private var currentQuestion = 0
     private var totalQuestion = 29 // count number of questions -1
-    private val selectedAnswers: List<TestData> by lazy {
-        val list = TestList.loadQuestionsFromAssets(requireContext())
-            list.forEach {
-            it.answers = it.answers.shuffled() as ArrayList<Variant>
-        }
-        list.shuffled()
-    }
+    private lateinit var selectedAnswers: List<TestData>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -46,6 +40,11 @@ class TestFragment : Fragment() {
     ): View {
         _binding = FragmentTestBinding.inflate(layoutInflater, container, false)
 
+        val list = TestList.loadQuestionsFromAssets(requireContext())
+        list.forEach {
+            it.answers = it.answers.shuffled() as ArrayList<Variant>
+        }
+        selectedAnswers = list.shuffled()
 
 
         return binding.root
@@ -87,18 +86,22 @@ class TestFragment : Fragment() {
     }
 
     private fun loadData() {
-        binding.questionNumberTv.text = "${currentQuestion + 1}/${totalQuestion + 1}"
-        if (totalQuestion == currentQuestion)
-            binding.nextBtn.text = requireContext().getString(R.string.finish)
-        else binding.nextBtn.text = requireContext().getString(R.string.next)
+        try {
+            binding.questionNumberTv.text = "${currentQuestion + 1}/${totalQuestion + 1}"
+            if (totalQuestion == currentQuestion) {
+                binding.nextBtn.text = requireContext().getString(R.string.finish)
+            } else binding.nextBtn.text = requireContext().getString(R.string.next)
 
-        binding.questionTitleTv.text = selectedAnswers[currentQuestion].question
-        binding.aAnswerTv.text = selectedAnswers[currentQuestion].answers[0].first
-        binding.bAnswerTv.text = selectedAnswers[currentQuestion].answers[1].first
-        binding.cAnswerTv.text = selectedAnswers[currentQuestion].answers[2].first
-        binding.dAnswerTv.text = selectedAnswers[currentQuestion].answers[3].first
-        if (selectedAnswers[currentQuestion].selectedAnswer != -1) {
-            binding.answersGroup.check(selectedAnswers[currentQuestion].selectedAnswer)
+            binding.questionTitleTv.text = selectedAnswers[currentQuestion].question
+            binding.aAnswerTv.text = selectedAnswers[currentQuestion].answers[0].first
+            binding.bAnswerTv.text = selectedAnswers[currentQuestion].answers[1].first
+            binding.cAnswerTv.text = selectedAnswers[currentQuestion].answers[2].first
+            binding.dAnswerTv.text = selectedAnswers[currentQuestion].answers[3].first
+            if (selectedAnswers[currentQuestion].selectedAnswer != -1) {
+                binding.answersGroup.check(selectedAnswers[currentQuestion].selectedAnswer)
+            }
+        } catch (ex: Exception) {
+            Log.e("TestFragment", ex.message.toString())
         }
     }
 
