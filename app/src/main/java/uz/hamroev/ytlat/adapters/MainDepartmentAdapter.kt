@@ -4,11 +4,13 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import uz.hamroev.ytlat.R
 import uz.hamroev.ytlat.databinding.ItemMainDepartmentBinding
 import uz.hamroev.ytlat.models.MainDepartment
+import uz.hamroev.ytlat.util.extensions.anim
 
 class MainDepartmentAdapter(
-    context: Context,
+    var context: Context,
     var list: ArrayList<MainDepartment>,
     var onCLickListener: OnCLickListener,
 ) :
@@ -18,6 +20,12 @@ class MainDepartmentAdapter(
         RecyclerView.ViewHolder(itemMainDepartmentBinding.root) {
 
         fun onBind(mainDepartment: MainDepartment, position: Int) {
+            if (position%2 == 0){
+                itemMainDepartmentBinding.main.animation = context.anim(R.anim.anim_right)
+            } else {
+                itemMainDepartmentBinding.main.animation = context.anim(R.anim.anim_left)
+            }
+
             itemMainDepartmentBinding.apply {
                 main.setOnClickListener {
                     onCLickListener.onClick(mainDepartment, position)

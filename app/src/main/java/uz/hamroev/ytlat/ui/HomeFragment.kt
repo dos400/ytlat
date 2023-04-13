@@ -142,6 +142,7 @@ class HomeFragment : Fragment() {
                         11 -> {
                             binding.drawerLayout.close()
                             findNavController().popBackStack()
+                            activity?.finish()
                         }
                     }
                 }

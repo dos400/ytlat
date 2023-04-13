@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back_light_blue1"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.FangaOidGlossariyFragment">
 
@@ -90,10 +91,12 @@
 
                     <!--                    main code here -->
 
-                    <com.pdfview.PDFView
-                        android:id="@+id/pdf_view"
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_main"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="match_parent"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/item_mavzu" />
 
                 </LinearLayout>
             </androidx.core.widget.NestedScrollView>

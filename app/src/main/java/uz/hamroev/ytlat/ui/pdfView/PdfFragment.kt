@@ -47,16 +47,32 @@ class PdfFragment : Fragment() {
                 binding.titleWindowTv.text = "Ma’ruzalar mavzulari va matni"
                 loadMaruza()
             }
-            "presentation" ->{
+            "presentation" -> {
                 binding.titleWindowTv.text = "Mavzular bo’yicha taqdimotlar"
                 loadPresentation()
+            }
+            "Fanga oid glossariy va adabiyotlar" -> {
+                loadGlossariy()
+            }
+        }
+    }
+
+    private fun loadGlossariy() {
+        when (Cache.mavzuNumber) {
+            "1" -> {
+                binding.titleWindowTv.text = "Fanga oid glossariy"
+                binding.pdfView.fromAsset("pdf_glossariy.pdf").show()
+            }
+            "2" -> {
+                binding.titleWindowTv.text = "Fanga oid adabiyotlar"
+                binding.pdfView.fromAsset("adabiyotlar.pdf").show()
             }
         }
     }
 
     private fun loadPresentation() {
-        when(Cache.mavzuNumber){
-            "1" ->{
+        when (Cache.mavzuNumber) {
+            "1" -> {
 
             }
         }

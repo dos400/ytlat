@@ -4,8 +4,10 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import uz.hamroev.ytlat.R
 import uz.hamroev.ytlat.databinding.ItemMavzuBinding
 import uz.hamroev.ytlat.models.Mavzu
+import uz.hamroev.ytlat.util.extensions.anim
 
 class MavzuAdapter(
     var context: Context,
@@ -17,6 +19,12 @@ class MavzuAdapter(
         RecyclerView.ViewHolder(itemMavzuBinding.root) {
 
         fun onBind(mavzu: Mavzu, position: Int) {
+
+            if (position%2 == 0){
+                itemMavzuBinding.main.animation = context.anim(R.anim.anim_right)
+            } else {
+                itemMavzuBinding.main.animation = context.anim(R.anim.anim_left)
+            }
             itemMavzuBinding.mavzuTitle.text = mavzu.title
             itemMavzuBinding.mavzuNumber.text = mavzu.number
             itemMavzuBinding.main.setOnClickListener {

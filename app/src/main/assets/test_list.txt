@@ -1,220 +1,220 @@
-﻿Ер тузиш амалиётига автоматлашган тизимларнинг тадбиқ этилишини нечта босқичга бўлиш мумкин.
+Yer tuzish amaliyotiga avtomatlashgan tizimlarning tadbiq etilishni nechta bosqichga bo‘lish mumkin.
 {
-=3 та
-~4 та
-~5 та
-~6 та
+=3 ta
+~4 ta
+~5 ta
+~6 ta
 }
 
-Ер тузиш амалиётига автоматлашган тизимларнинг тадбиқ этилишини биринчи босқичида қандай ишлар бажарилган?
+Yer tuzish amaliyotiga avtomatlashgan tizimlarning tadbiq etilishini birinchi bosqichida qanday ishlar bajarilgan?
 {
-=лойиҳаларни агроиқтисодий асослаш, смета- молия ва айрим техник қисмлар билан боғлиқ ҳисоблашлар автоматлаштирилди.
-~ер тузиш лойиҳалари агроиқтисодий асосланди
-~ер тузиш лойиҳаларининг смета- молия ва айрим техник қисмлар билан боғлиқ ҳисоблашлар автоматлаштирилди.
-~ҳисоблаш ва махсус шакллар ҳамда зарур жадвалларни тўлғазиш каби унчалик мураккаб бўлмаган ҳисоблашлар бажарилди.
+=loyihalarni agroiqtisodiy asoslash, smeta- moliya va ayrim texnik qismlar bilan bog‘liq hisoblashlar avtomatlashtirildi.
+~yer tuzish loyihalari agroiqtisodiy asoslandi
+~yer tuzish loyihalarining smeta- moliya va ayrim texnik qismlar bilan bog‘liq hisoblashlar avtomatlashtirildi.
+~hisoblash va maxsus shakllar hamda zarur jadvallarni to‘lg‘azish kabi unchalik murakkab bo‘lmagan hisoblashlar bajarildi.
 }
 
-Қуйидагилардан қайсилари ЕТЛАТ таркибига киради?
+Quyidagilardan qaysilari YTLAT tarkibiga kiradi?
 {
-=ЭҲМ га уланадиган техник воситалар мажмуи ва аниқ лойиҳавий масалаларни ечиш технологиясида жамланган лойиҳалаш усуллари ва дастурлаш маҳсулотлар
-~лойиҳани ечиш учун маълумотларни ва зарур шаклга келтирилган ҳолда олинадиган натижавий маълумотлар ва ҳужжатларни ўз ичига оладиган маълумотлар банки
-~ лойиҳа ишларини ташкил этиш ва кетма-кет бажариш тизими
-~ барчаси.
+=EHM ga ulanadigan texnik vositalar majmui va aniq loyihaviy masalalarni yechish texnologiyasida jamlangan loyihalash usullari va dasturlash mahsulotlar
+~loyihani yechish uchun ma’lumotlarni va zarur shaklga keltirilgan holda olinadigan natijaviy ma’lumotlar va hujjatlarni o‘z ichiga oladigan ma’lumotlar banki
+~ loyiha ishlarini tashkil etish va ketma-ket bajarish tizimi
+~ barchasi.
 }
 
-ЕТЛАТнинг мақсади нимадан иборат?
+YTLATning maqsadi nimadan iborat?
 {
-=ерлардан оқилона фойданиш ва уларни муҳофаза қилиш масалаларини, лойиҳалаш жараёнларини автоматлаштириш ҳисобига қабул қилинадиган ечимларни олишнинг тезкорлигини оширишдан
-~лойиҳалар сифатини яхшилаш ва меҳнат сарфини камайтириш имконини берадиган, сифат жиҳатдан юқори даражада маълумотларни олишдан
-~таҳлил қилиш ва оптималлаштириш технологияларини қўллаш ҳисобига ечишдан
-~барчасидан.
+=yerlardan oqilona foydanish va ularni muhofaza qilish masalalarini, loyihalash jarayonlarini avtomatlashtirish hisobiga qabul qilinadigan yechimlarni olishning tezkorligini oshirishdan
+~loyihalar sifatini yaxshilash va mehnat sarfini kamaytirish imkonini beradigan, sifat jihatdan yuqori darajada ma’lumotlarni olishdan
+~tahlil qilish va optimallashtirish texnologiyalarini qo‘llash hisobiga yechishdan
+~barchasidan.
 }
 
-Автоматлаш объекти сифатида нима хизмат қилади?
+Avtomatlash ob’ekti sifatida nima xizmat qiladi?
 {
-=ер тузишни лойиҳалаш жараёнлари, маълумотларни йиғиш ва таҳлил қилиш, ҳужжатларни шакллантириш
-~лойиҳавий ечимларни асослаш
-~лойиҳавий ҳужжатларни шакллантириш
-~маълумотларни йиғиш ва таҳлил қилиш
+=yer tuzishni loyihalash jarayonlari, ma’lumotlarni yig‘ish va tahlil qilish, hujjatlarni shakllantirish
+~loyihaviy yechimlarni asoslash
+~loyihaviy hujjatlarni shakllantirish
+~ma’lumotlarni yig‘ish va tahlil qilish
 }
 
-Ер тузишни лойиҳалаш жараёнининг ўзига хос хусусияти нимадан иборат?
+Yer tuzishni loyihalash jarayonining o‘ziga xos xususiyati nimadan iborat?
 {
-=мураккаб бўлиб, кўп сонли муқобил ечимларни ўз ичига олади
-~ўзаро алоқа ва сиқатларни ўз ичига олади
-~содда ва 1 та ечимдан иборат
-~одам машина шаклида яратилиши керак
+=murakkab bo‘lib, ko‘p sonli muqobil yechimlarni o‘z ichiga oladi
+~o‘zaro aloqa va siqatlarni o‘z ichiga oladi
+~sodda va 1 ta yechimdan iborat
+~odam mashina shaklida yaratilishi kerak
 }
 
-Ер тузишни лойиҳалашнинг автоматлашган тизимини яратиш нимага боғлиқ?
+Yer tuzishni loyihalashning avtomatlashgan tizimini yaratish nimaga bog‘liq?
 {
-=ЭҲМларнинг хотира сиғими, тезкорлиги ва дастурий таъминотига
-~ЭҲМларнинг  тезкорлиги ва техник таъминотига
-~дастурий таъминотига
-~замонавий асбоб ва ускуналар билан таъминланиш даражасига
+=EHMlarning xotira sig‘imi, tezkorligi va dasturiy ta’minotiga
+~EHMlarning  tezkorligi va texnik ta’minotiga
+~dasturiy ta’minotiga
+~zamonaviy asbob va uskunalar bilan ta’minlanish darajasiga
 }
 
-Ер тузиш масалаларини ечишда қўлланиладиган дастурий махсулотларни (ДМ) шартли равишда, уларнинг вазифаларни ечиш имкониятларидан ва бу имкониятлардан тўла фойдаланиш мумкинлигига қараб нечта даражаа бўлиш мумкин?
+Yer tuzish masalalarini yechishda qo‘llaniladigan dasturiy maxsulotlarni (DM) shartli ravishda, ularning vazifalarni yechish imkoniyatlaridan va bu imkoniyatlardan to‘la foydalanish mumkinligiga qarab nechta darajaa bo‘lish mumkin?
 {
-=4 та
-~5 та
-~2 та
-~6 та.
+=4 ta
+~5 ta
+~2 ta
+~6 ta.
 }
 
-Замонавий ГАТларни нечта гуруҳга бўлиш мумкин?
+Zamonaviy GATlarni nechta guruhga bo‘lish mumkin?
 {
-=3 та
-~4 та
-~5 та
-~8 та.
+=3 ta
+~4 ta
+~5 ta
+~8 ta.
 }
 
-ГАТларда ишлатиладиган маълумотлар нималардан  иборат бўлади?
+GATlarda ishlatiladigan ma’lumotlar nimalardan  iborat bo‘ladi?
 {
-=картографик асосдан ва унга  мос маълумотлар базасидан
-~маълумотлар базасидан
-~картографик асосдан
-~таянч нуқталардан.
+=kartografik asosdan va unga  mos ma’lumotlar bazasidan
+~ma’lumotlar bazasidan
+~kartografik asosdan
+~tayanch nuqtalardan.
 }
 
-ЕАТ таркибининг қатламлари сони нечта?
+YAT tarkibining qatlamlari soni nechta?
 {
-=6 та
-~5 та
-~10 та
-~12 та.
+=6 ta
+~5 ta
+~10 ta
+~12 ta.
 }
 
-ЕТЛАТнинг техник таъминоти ўз ичига нималарни олади?
+YTLATning texnik ta’minoti o‘z ichiga nimalarni oladi?
 {
-=компьютер ва бошқа механик, магнитли, электр, электрон ва оптик уланма қурилмаларни
-~ ЭҲМ бошқарувида ёки мустақил ишлайдиган асбобларни
-~сканер ва плоттерни
-~киритиш ва чиқариш қурилмаларини.
+=kompyuter va boshqa mexanik, magnitli, elektr, elektron va optik ulanma qurilmalarni
+~ EHM boshqaruvida yoki mustaqil ishlaydigan asboblarni
+~skaner va plotterni
+~kiritish va chiqarish qurilmalarini.
 }
 
-Дастлабки даврларда ГАТ қандай ишларни бажаришга қаратилган эди?
+Dastlabki davrlarda GAT qanday ishlarni bajarishga qaratilgan edi?
 {
-=хар хил ҳудудий муаммолар билан боғлиқ бошқариш ечимларини қабул қилишга
-~Ер ўлчаш ишларига
-~Ер баҳолаш ишларига
-~Ер тузиш ишларига
+=xar xil hududiy muammolar bilan bog‘liq boshqarish yechimlarini qabul qilishga
+~Yer o‘lchash ishlariga
+~Yer baholash ishlariga
+~Yer tuzish ishlariga
 }
 
-Қайси жавобда ЕАТдан ГАТнинг фарқи тўғри кўрсатилган?
+Qaysi javobda YATdan GATning farqi to‘g‘ri ko‘rsatilgan?
 {
-=биринчи наввбатда ер ресурслари ва у билан боғланган кўчмас мулк объектлари тўғрисида маълумотни ўз ичига олади
-~биринчи наввбатда табиий ресурслар тўғрисида маълумотни ўз ичига олади
-~биринчи наввбатда ер  билан боғланган кўчмас мулк объектлари тўғрисида маълумотни ўз ичига олади
-~ЕАТ биринчи барча кўчмас мулк объектлари тўғрисида маълумотни ўз ичига олади
+=birinchi navvbatda yer resurslari va u bilan bog‘langan ko‘chmas mulk ob’ektlari to‘g‘risida ma’lumotni o‘z ichiga oladi
+~birinchi navvbatda tabiiy resurslar to‘g‘risida ma’lumotni o‘z ichiga oladi
+~birinchi navvbatda yer  bilan bog‘langan ko‘chmas mulk ob’ektlari to‘g‘risida ma’lumotni o‘z ichiga oladi
+~YAT birinchi barcha ko‘chmas mulk ob’ektlari to‘g‘risida ma’lumotni o‘z ichiga oladi
 }
 
-ЕАТда чегара тармоғининг таянч нуқталари қатлами қандай маълумотларни ўз ичига олади?
+YATda chegara tarmog‘ining tayanch nuqtalari qatlami qanday ma’lumotlarni o‘z ichiga oladi?
 {
-=ЕАТ нинг бошқа маълумот қатламлари учун ҳамда бошқа координаталарга эга маълумотлар учун базавий ҳисобланади
-~маъмурий чегаралар, кўчмас мулклар  чегаралари ва муддатли мустақил фойдаланиш ҳуқуқлари чегаралар кўрсатилади
-~ер турлари (ҳайдалма ерлар, дарахтзорлар, яйловлар ва бошқ.), иморатлар, сув манбаалари, ўрмонларнинг жойлашуви кўрсатилади
-~нуқта  ва чизиқ  шаклидаги объектларнинг жойлашуви тўғрисидаги маълумотларни ўз ичига олади
+=YAT ning boshqa ma’lumot qatlamlari uchun hamda boshqa koordinatalarga ega ma’lumotlar uchun bazaviy hisoblanadi
+~ma’muriy chegaralar, ko‘chmas mulklar  chegaralari va muddatli mustaqil foydalanish huquqlari chegaralar ko‘rsatiladi
+~yer turlari (haydalma yerlar, daraxtzorlar, yaylovlar va boshq.), imoratlar, suv manbaalari, o‘rmonlarning joylashuvi ko‘rsatiladi
+~nuqta  va chiziq  shaklidagi ob’ektlarning joylashuvi to‘g‘risidagi ma’lumotlarni o‘z ichiga oladi
 }
 
-Қайси назарияга асосан ЕТЛАТни  таркибий қисмларга бўлиш мумкин?
+Qaysi nazariyaga asosan YTLATni  tarkibiy qismlarga bo‘lish mumkin?
 {
-=тизимлар назариясига
-~Бўлаклар назариясига
-~даражалар назариясига
-~моделлаштириш назариясига
+=tizimlar nazariyasiga
+~Bo‘laklar nazariyasiga
+~darajalar nazariyasiga
+~modellashtirish nazariyasiga
 }
 
-Қайси жавобда ЕТЛАТнинг  таъминот воситаларига қўйиладиган талаб тўғри кўрсатилган?
+Qaysi javobda YTLATning  ta’minot vositalariga qo‘yiladigan talab to‘g‘ri ko‘rsatilgan?
 {
-=тезкорлик, кўп ечимлилик, белгиланган муддатларга риоя қилиш
-~Замонавий ер тузиш ишларини қисқа муддатда бажариш
-~Лойиҳаларни ишлашда замонавий технологиялардан фойдаланиш
-~Электрон ҳариталарни яратиш имконияти
+=tezkorlik, ko‘p yechimlilik, belgilangan muddatlarga rioya qilish
+~Zamonaviy yer tuzish ishlarini qisqa muddatda bajarish
+~Loyihalarni ishlashda zamonaviy texnologiyalardan foydalanish
+~Elektron haritalarni yaratish imkoniyati
 }
 
-ЕТЛАТда фойдаланувчининг психофизиологик хусусиятлари концепциясининг мақсади нимадан иборат?
+YTLATda foydalanuvchining psixofiziologik xususiyatlari konsepsiyasining maqsadi nimadan iborat?
 {
-=фойдалананувчининг инсон-машина фаолиятини ёритиш, инсон фаолиятига ЭҲВ тўплами ва дастурий таъминот томонидан юкланадиган чеклашларни аниқлаш
-~фойдаланувчининг ишчи кенглиги ва қўли етиш зонасини аниқлайдиган антропометрик характеристикаси кўрсаткичларини ҳисобга олиш зарурлигини 
-~фойдаланувчи тамонидан маълумотни қабул қилиш ва қайта ишлаш кўрсаткичлари, ҳаракат фаолияти, билим даражаси кўрсаткичларини ҳисобга олиш зарурлигини
-~фойдаланувчининг ҳаракат фаолияти, билим даражаси, физиологик ва психологик талаблари, шахсий сифатлари кўрсаткичларини ҳисобга олиш зарурлигини
+=foydalananuvchining inson-mashina faoliyatini yoritish, inson faoliyatiga EHV to‘plami va dasturiy ta’minot tomonidan yuklanadigan cheklashlarni aniqlash
+~foydalanuvchining ishchi kengligi va qo‘li yetish zonasini aniqlaydigan antropometrik xarakteristikasi ko‘rsatkichlarini hisobga olish zarurligini 
+~foydalanuvchi tamonidan ma’lumotni qabul qilish va qayta ishlash ko‘rsatkichlari, harakat faoliyati, bilim darajasi ko‘rsatkichlarini hisobga olish zarurligini
+~foydalanuvchining harakat faoliyati, bilim darajasi, fiziologik va psixologik talablari, shaxsiy sifatlari ko‘rsatkichlarini hisobga olish zarurligini
 }
 
-ЕТЛАТда қатлам тушунчаси нимани англатади?.
+YTLATda qatlam tushunchasi nimani anglatadi?.
 {
-=айрим ҳудуд ва координаталар тизими ичидаги объектлар тўплами
-~битта мавзуга тегишли, бир турдаги (бир ўлчамли) майдонли объектлар тўплами
-~айрим ҳудуд ва координаталар тизими ичидаги,битта мавзуга тегишли, бир турдаги (бир ўлчамли) майдонли объектлар тўплами
-~бу қатламлар тўплами учун умумий бўлган объектлар тўплами.
+=ayrim hudud va koordinatalar tizimi ichidagi ob’ektlar to‘plami
+~bitta mavzuga tegishli, bir turdagi (bir o‘lchamli) maydonli ob’ektlar to‘plami
+~ayrim hudud va koordinatalar tizimi ichidagi,bitta mavzuga tegishli, bir turdagi (bir o‘lchamli) maydonli ob’ektlar to‘plami
+~bu qatlamlar to‘plami uchun umumiy bo‘lgan ob’ektlar to‘plami.
 }
 
-ЕТЛАТда растр тушунчаси нимани англатади?
+YTLATda rastr tushunchasi nimani anglatadi?
 {
-=тасвир элементларининг (пикселлар) тўғри бурчакли сонли матрицаси
-~тасвир элементи ёки тасвирнинг энг кичик бўлаги
-~тасвирни дискретлаш натижаси
-~ёпиқ кетма-кетликда уланган эгри чизиқлар.
+=tasvir elementlarining (piksellar) to‘g‘ri burchakli sonli matritsasi
+~tasvir elementi yoki tasvirning eng kichik bo‘lagi
+~tasvirni diskretlash natijasi
+~yopiq ketma-ketlikda ulangan egri chiziqlar.
 }
 
-ЕТЛАТда графикавий тахрирчининг асосий вазифаси нимадан иборат?
+YTLATda grafikaviy taxrirchining asosiy vazifasi nimadan iborat?
 {
-=растрли шаклни векторли шаклга айлантиришни таъминлайди
-~Чизмаларни тахрирлайди
-~Матнни тахрирлайди
-~Маълумотлар аниқлигини таъминлайди
+=rastrli shaklni vektorli shaklga aylantirishni ta’minlaydi
+~Chizmalarni taxrirlaydi
+~Matnni taxrirlaydi
+~Ma’lumotlar aniqligini ta’minlaydi
 }
 
-Қайси жавобда бошланғич ва натижавий маълумотларни чиқариш шакллари тўғри кўрсатилган?
+Qaysi javobda boshlang‘ich va natijaviy ma’lumotlarni chiqarish shakllari to‘g‘ri ko‘rsatilgan?
 {
-=ҳисобот жадваллари,карталар ва чизмалар, эркин сўровлар
-~Фақатгина ихтиёрий жадваллар ва чизмалар
-~Фақатгина ихтиёрий жадваллар ва хисоботлар
-~Фақатгина ҳисоботлар ва эркин сўровлар
+=hisobot jadvallari,kartalar va chizmalar, erkin so‘rovlar
+~Faqatgina ixtiyoriy jadvallar va chizmalar
+~Faqatgina ixtiyoriy jadvallar va xisobotlar
+~Faqatgina hisobotlar va erkin so‘rovlar
 }
 
-ЕТЛАТда маълумотларни ҳимоя қилиш тушунчаси нимани англатади?
+YTLATda ma’lumotlarni himoya qilish tushunchasi nimani anglatadi?
 {
-=тизимга рухсатсиз кириш, маълумотларни тасодифий ўчириш ва тахрирлашдан сақлайди
-~Дастурлар тўпламидан рухсатсиз фойдаланиш мумкин эмаслигини
-~Фойдаланувчилар учун рухсат этиладиган харакатларни белгилашни
-~Мулк ҳуқуқини сақлаш кераклигини
+=tizimga ruxsatsiz kirish, ma’lumotlarni tasodifiy o‘chirish va taxrirlashdan saqlaydi
+~Dasturlar to‘plamidan ruxsatsiz foydalanish mumkin emasligini
+~Foydalanuvchilar uchun ruxsat etiladigan xarakatlarni belgilashni
+~Mulk huquqini saqlash kerakligini
 }
 
-ЕТЛАТда маълумотларга чуқур ишлов бериш ва ҳисоботларни шакллантиришни ким бажаради?
+YTLATda ma’lumotlarga chuqur ishlov berish va hisobotlarni shakllantirishni kim bajaradi?
 {
-=Тажрибали ва юқори малакага эга мутахассис томонидан
-~Лойиҳалаш дастурлари томонидан.
-~Коппьютер ва мутахассис билан биргаликда
-~Компьютер томонидан
+=Tajribali va yuqori malakaga ega mutaxassis tomonidan
+~Loyihalash dasturlari tomonidan.
+~Koppyuter va mutaxassis bilan birgalikda
+~Kompyuter tomonidan
 }
 
-ЕТЛАТда маълумотлар базасини шакллантиришнинг нечта тамойили мавжуд?
+YTLATda ma’lumotlar bazasini shakllantirishning nechta tamoyili mavjud?
 {
-=8 та
-~6 та
-~7 та
-~10 та
+=8 ta
+~6 ta
+~7 ta
+~10 ta
 }
 
-ЕТЛАТнинг графикларга ва улар билан боғлиқ ўлчамларга аналитик ишлов бериш тизимини шартли равишда нечта гурухга бўлиш мумкин?
+YTLATning grafiklarga va ular bilan bog‘liq o‘lchamlarga analitik ishlov berish tizimini shartli ravishda nechta guruxga bo‘lish mumkin?
 {
-=2 та
-~4 та
-~3 та
-~5 та
+=2 ta
+~4 ta
+~3 ta
+~5 ta
 }
 
-ЕТЛАТда ижодий вазифаларни шакллантириш элементини қайси концепция амалга оширади?
+YTLATda ijodiy vazifalarni shakllantirish elementini qaysi konsepsiya amalga oshiradi?
 {
-=топқирлик концепцияси
-~Очиқлик концепцияси
-~Ишончлилик концепцияси
-~Мижоз-сервер концепцияси
+=topqirlik konsepsiyasi
+~Ochiqlik konsepsiyasi
+~Ishonchlilik konsepsiyasi
+~Mijoz-server konsepsiyasi
 }
 
-ЕТЛАТда текстурани сиқиш қайси технологиядан фойдаланилади?
+YTLATda teksturani siqish qaysi texnologiyadan foydalaniladi?
 {
 =S3TC
 ~Word
@@ -222,18 +222,23 @@
 ~CAD
 }
 
-Қуйидагилардан қайси бири уч ўлчамли графикага ишлов бериш жараёни босқичларини ифодалайди:?
+Quyidagilardan qaysi biri uch o‘lchamli grafikaga ishlov berish jarayoni bosqichlarini ifodalaydi:?
 {
-=шаклни ўзгартириш бўйича ҳисоблашлар, ёритиш, геометрик ишлов бериш ва рендеринг
-~ёритиш, геометрик ишлов бериш ва ўлчаш
-~ёритиш, геометрик ишлов бериш ва рендеринг
-~шаклни ўзгартириш бўйича ҳисоблашларва ёритиш
+=shaklni o‘zgartirish bo‘yicha hisoblashlar, yoritish, geometrik ishlov berish va rendering
+~yoritish, geometrik ishlov berish va o‘lchash
+~yoritish, geometrik ishlov berish va rendering
+~shaklni o‘zgartirish bo‘yicha hisoblashlarva yoritish
 }
 
-ЕТЛАТда графикавий маълумотларни компьютерга киритишнинг нечта усули мавжуд?
+YTLATda grafikaviy ma’lumotlarni kompyuterga kiritishning nechta usuli mavjud?
 {
-=2 та
-~4 та
-~5 та
-~3 та
+=2 ta
+~4 ta
+~5 ta
+~3 ta
 }
+
+
+
+
+
