@@ -237,8 +237,3 @@ YTLATda grafikaviy ma’lumotlarni kompyuterga kiritishning nechta usuli mavjud?
 ~5 ta
 ~3 ta
 }
-
-
-
-
-

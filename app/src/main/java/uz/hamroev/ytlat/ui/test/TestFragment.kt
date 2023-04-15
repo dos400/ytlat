@@ -12,7 +12,12 @@ import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.launch
 import uz.hamroev.ytlat.R
 import uz.hamroev.ytlat.cache.Cache
 import uz.hamroev.ytlat.databinding.DialogResultBinding
@@ -40,13 +45,6 @@ class TestFragment : Fragment() {
     ): View {
         _binding = FragmentTestBinding.inflate(layoutInflater, container, false)
 
-        val list = TestList.loadQuestionsFromAssets(requireContext())
-        list.forEach {
-            it.answers = it.answers.shuffled() as ArrayList<Variant>
-        }
-        selectedAnswers = list.shuffled()
-
-
         return binding.root
     }
 
@@ -54,11 +52,22 @@ class TestFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         openFormDialog()
 
+        lifecycleScope.launchWhenResumed {
+            TestList.loadQuestionsFromAssets(requireContext()).collectLatest {
+                val list = it
+                list.forEach {
+                    it.answers = it.answers.shuffled() as ArrayList<Variant>
+                }
+                selectedAnswers = list.shuffled()
+            }
+            delay(200)
+            loadData()
+        }
+
         binding.toolbar.setNavigationOnClickListener {
             findNavController().popBackStack()
         }
 
-        loadData()
         binding.nextBtn.setOnClickListener {
             try{
                 if (currentQuestion == totalQuestion) {
